@@ -26,6 +26,6 @@ def git_commit
     }
 
     stage('Terraform Apply'){
-        sh 'terraform apply -var="buildid=khasim1643"'
+        sh 'terraform apply -var="buildid=khasim1643" -auto-approve'
     }   
 }
