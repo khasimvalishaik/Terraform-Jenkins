@@ -24,7 +24,8 @@ def git_commit
     stage('Terraform Plan'){
         sh 'terraform plan'
     }
+
     stage('Terraform Apply'){
         sh 'terraform apply -var="buildid=khasim1643"'
-    
+    }   
 }
