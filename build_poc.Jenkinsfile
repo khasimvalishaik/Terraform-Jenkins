@@ -13,9 +13,11 @@ def git_commit
     git_branch = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
     echo "The branch name is : ${git_branch}"
     echo "the commit id is : ${git_commit}"
+    
     }
 
     stage('Terraform init'){
+        sh 'sudo chmod 777 /var/lib/jenkins/workspace/TerraformPipeline/myscript.sh'
         sh 'terraform init'
         sh 'terraform fmt'
         sh 'terraform validate'
