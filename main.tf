@@ -16,7 +16,7 @@ provider "aws" {
 resource "null_resource" "change_buildid" {
   
   provisioner "local-exec" {
-    command = "./myscript.sh $envbuildid"
+    command = "sudo ./myscript.sh $envbuildid"
 
     environment = {
       envbuildid = "${var.buildid}"
