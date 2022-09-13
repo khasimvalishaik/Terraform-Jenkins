@@ -6,7 +6,7 @@ def buildinfo
 def git_commit
 
     stage('source'){
-    cleanWs()
+    //cleanWs()
     checkout scm
 
     git_commit = sh(returnStdout: true, script: 'git rev-parse --short=8 HEAD').trim()
