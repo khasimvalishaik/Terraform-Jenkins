@@ -16,9 +16,9 @@ provider "aws" {
 resource "null_resource" "change_buildid" {
   
   provisioner "local-exec" {
-    command = command = <<-EOT
+    command = <<-EOT
       chmod +x ./myscript.sh
-      ./myscript.sh $envbuildid
+      ./myscript.sh $envbuildid 
     EOT
      
 
