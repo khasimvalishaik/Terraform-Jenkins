@@ -1,3 +1,3 @@
 #!/bin/bash
-Lbuildid = $1
+Lbuildid=$1
 echo ${Lbuildid}
