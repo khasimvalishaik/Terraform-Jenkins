@@ -18,6 +18,8 @@ resource "null_resource" "change_buildid" {
   provisioner "local-exec" {
     command = <<-EOT
       chmod +x ./myscript.sh
+      sudo su - jbossadm
+      whoami
       ./myscript.sh $envbuildid 
     EOT
      
